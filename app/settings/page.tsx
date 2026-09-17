@@ -1,0 +1,1 @@
+import { Settings } from "lucide-react"; import { PlaceholderPage } from "@/components/pages/PlaceholderPage"; export default function SettingsPage() { return <PlaceholderPage title="Settings" description="Configure your NEXO workspace preferences." icon={Settings} />; }

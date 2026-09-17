@@ -1,0 +1,6 @@
+export type SchoolStatus="active"|"inactive"; export type TransportationStatus="assigned"|"not-assigned"|"inactive"; export type BusStatus="active"|"available"|"maintenance"|"inactive"; export type DriverStatus="active"|"available"|"inactive"|"suspended"; export type RouteStatus="active"|"inactive"; export type RouteType="morning"|"afternoon"|"custom";
+export interface School{id:string;name:string;location:string;address:string;phone:string;email:string;studentCapacity:number;studentCount:number;activeRoutes:number;status:SchoolStatus}
+export interface Student{id:string;studentId:string;name:string;schoolId:string;schoolName:string;grade:string;guardianName:string;guardianPhone:string;routeId:string;routeName:string;transportationStatus:TransportationStatus}
+export interface Bus{id:string;name:string;registrationNumber:string;capacity:number;driverId:string;routeId:string;status:BusStatus;model:string;year:number}
+export interface Driver{id:string;name:string;phone:string;licenseNumber:string;licenseExpiry:string;busId:string;routeId:string;status:DriverStatus}
+export interface Route{id:string;name:string;schoolId:string;busId:string;driverId:string;routeType:RouteType;startTime:string;endTime:string;capacity:number;pickupLocation?:string;dropoffLocation?:string;status:RouteStatus}

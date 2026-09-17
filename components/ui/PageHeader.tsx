@@ -1,0 +1,2 @@
+import type { LucideIcon } from "lucide-react";
+export function PageHeader({ title, description, icon: Icon }: { title: string; description: string; icon: LucideIcon }) { return <div className="flex items-center gap-4"><span className="flex size-12 items-center justify-center rounded-2xl bg-teal-100 text-teal-700"><Icon size={24} aria-hidden="true" /></span><div><h2 className="text-2xl font-bold text-slate-950">{title}</h2><p className="mt-1 text-slate-600">{description}</p></div></div>; }
